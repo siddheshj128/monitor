@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <span class="logo">⚡</span>
+    <span class="title">Magic xPI Monitor</span>
+  </div>
+  <div class="navbar-center">
+    <span class="env-badge">{{ environment }}</span>
+    <span class="status-dot" [class.online]="status === 'Online'"></span>
+    <span class="status-label">{{ status }}</span>
+  </div>
+  <div class="navbar-right">
+    <span class="date">{{ currentDate | date:'medium' }}</span>
+    <button class="btn-refresh">↻ Refresh</button>
+  </div>
+</nav>

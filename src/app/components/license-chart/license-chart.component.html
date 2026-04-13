@@ -1,0 +1,32 @@
+<div class="charts-row">
+  <div class="card">
+    <apx-chart
+      [series]="areaOptions.series"
+      [chart]="areaOptions.chart"
+      [xaxis]="areaOptions.xaxis"
+      [yaxis]="areaOptions.yaxis"
+      [fill]="areaOptions.fill"
+      [stroke]="areaOptions.stroke"
+      [tooltip]="areaOptions.tooltip"
+      [legend]="areaOptions.legend"
+      [title]="areaOptions.title"
+      [grid]="areaOptions.grid"
+      [colors]="areaOptions.colors"
+    ></apx-chart>
+  </div>
+  <div class="card">
+    <apx-chart
+      [series]="barOptions.series"
+      [chart]="barOptions.chart"
+      [xaxis]="barOptions.xaxis"
+      [yaxis]="barOptions.yaxis"
+      [fill]="barOptions.fill"
+      [tooltip]="barOptions.tooltip"
+      [legend]="barOptions.legend"
+      [title]="barOptions.title"
+      [grid]="barOptions.grid"
+      [plotOptions]="barOptions.plotOptions"
+      [colors]="barOptions.colors"
+    ></apx-chart>
+  </div>
+</div>
