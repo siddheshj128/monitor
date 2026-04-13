@@ -1,0 +1,45 @@
+.stat-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+
+  .stat-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #78909c;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .stat-value {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1565C0;
+  }
+
+  .stat-sub {
+    font-size: 0.7rem;
+    color: #90a4ae;
+  }
+
+  .trend {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    margin-top: 2px;
+
+    &[data-trend='up']      { background: rgba(46,125,50,0.12); color: #2e7d32; }
+    &[data-trend='down']    { background: rgba(230,74,25,0.12); color: #E64A19; }
+    &[data-trend='neutral'] { background: rgba(96,125,139,0.12); color: #607d8b; }
+  }
+}

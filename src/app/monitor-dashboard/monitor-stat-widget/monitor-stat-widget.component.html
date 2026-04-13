@@ -1,0 +1,17 @@
+<md-card-shell>
+  <div class="stat-top">
+    <div class="stat-info">
+      <div class="stat-label">{{ stat.label }}</div>
+      <div class="stat-value" [style.color]="stat.color">{{ stat.value }}</div>
+      <div class="stat-sub" *ngIf="stat.sub">{{ stat.sub }}</div>
+    </div>
+    <span class="trend" [attr.data-trend]="stat.trend">{{ stat.trendValue }}</span>
+  </div>
+  <apx-chart
+    [series]="sparkOpts.series"
+    [chart]="sparkOpts.chart"
+    [stroke]="sparkOpts.stroke"
+    [fill]="sparkOpts.fill"
+    [colors]="sparkOpts.colors"
+  ></apx-chart>
+</md-card-shell>
