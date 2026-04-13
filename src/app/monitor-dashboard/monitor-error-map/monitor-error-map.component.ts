@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   NgApexchartsModule, ApexChart, ApexDataLabels,
   ApexPlotOptions, ApexTitleSubtitle, ApexTooltip
@@ -13,7 +13,7 @@ import { MonitorCardShellComponent } from '../monitor-card-shell/monitor-card-sh
   templateUrl: './monitor-error-map.component.html',
   styleUrl: './monitor-error-map.component.scss'
 })
-export class MonitorErrorMapComponent implements OnInit {
+export class MonitorErrorMapComponent {
   chartOptions: {
     series: any[];
     chart: ApexChart;
@@ -52,6 +52,4 @@ export class MonitorErrorMapComponent implements OnInit {
     },
     colors: ['#1565C0', '#1976D2', '#42A5F5', '#E64A19', '#FF7043']
   };
-
-  ngOnInit(): void {}
 }
