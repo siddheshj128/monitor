@@ -1,0 +1,37 @@
+<md-card-shell>
+  <div class="table-header">
+    <h3 class="table-title">Recent Alerts</h3>
+    <div class="filters">
+      <button
+        *ngFor="let f of filters"
+        class="filter-btn"
+        [class.active]="filterStatus === f"
+        (click)="filterStatus = f"
+      >{{ f }}</button>
+    </div>
+  </div>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Time</th>
+          <th>Service</th>
+          <th>Severity</th>
+          <th>Message</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let a of filtered">
+          <td class="mono">{{ a.id }}</td>
+          <td class="mono">{{ a.timestamp | date:'HH:mm:ss' }}</td>
+          <td>{{ a.service }}</td>
+          <td><span class="badge" [attr.data-sev]="a.severity">{{ a.severity }}</span></td>
+          <td class="msg">{{ a.message }}</td>
+          <td><span class="badge" [attr.data-status]="a.status">{{ a.status }}</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</md-card-shell>

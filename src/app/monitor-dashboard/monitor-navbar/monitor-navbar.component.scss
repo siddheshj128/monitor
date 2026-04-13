@@ -1,0 +1,85 @@
+.md-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  height: 64px;
+  background: #1565C0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .logo { font-size: 1.4rem; }
+
+    .title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .badge-v2 {
+      background: rgba(255, 255, 255, 0.25);
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 4px;
+      letter-spacing: 0.06em;
+    }
+  }
+
+  .navbar-center {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .env-badge {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      padding: 2px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+
+      &.online {
+        background: #69f0ae;
+        box-shadow: 0 0 6px #69f0ae;
+      }
+    }
+
+    .status-label { font-size: 0.85rem; }
+  }
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .date { font-size: 0.8rem; opacity: 0.8; }
+
+    .btn-refresh {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      padding: 4px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+
+      &:hover { background: rgba(255, 255, 255, 0.25); }
+    }
+  }
+}
